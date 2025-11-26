@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Premium Demolition | Professional Demolition & Excavation Services in Ontario",
+  description: "Safe, efficient residential and commercial demolition, site clearing, and excavation services across Ontario. Serving Hamilton, Mississauga, Toronto, Markham, Barrie, Oakville, North Bay, London, and Muskoka. Experienced crews, reliable equipment, professional results.",
 };
 
 export default function RootLayout({
