@@ -457,15 +457,28 @@ section.bg-secondary p {
 }
 
 /* ============================================
-   ORANGE TEXT BUTTON CLASS
-   For CTA buttons that need safety orange text
+   CTA SECTION BUTTON TEXT CLASSES
+   Specific classes for the two CTA buttons ONLY
    ============================================ */
 
-.btn-orange-text {
+/* First CTA button: "Request a Quote" - Orange text on white background */
+.cta-btn-quote {
   color: hsl(var(--secondary)) !important;
+  font-weight: 600 !important;
 }
 
-.btn-orange-text:hover {
+.cta-btn-quote:hover {
   color: hsl(var(--secondary)) !important;
-  opacity: 0.9;
+  opacity: 0.95;
+}
+
+/* Second CTA button: "Call" - White text on transparent/dark background */
+.cta-btn-call {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.cta-btn-call:hover {
+  color: white !important;
+  opacity: 1;
 }
