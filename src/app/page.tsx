@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 import { ServiceCard } from "@/components/service-card";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { Button } from "@/components/ui/button";
-import { Home as HomeIcon, Building2, Truck, TreePine, HardHat, Shield, CheckCircle, Phone } from "lucide-react";
+import { Home as HomeIcon, Building2, Truck, TreePine, HardHat, Shield, CheckCircle, Phone, Users, Briefcase, Trophy, Clock } from "lucide-react";
 
 export default function Home() {
   const coreServices = [
@@ -84,15 +84,25 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground py-20 md:py-32">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground py-20 md:py-32 overflow-hidden">
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 opacity-20">
+            <img
+              src="/generated/demolition-hero.png"
+              alt="Professional demolition site"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-primary/80"></div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary px-4 py-2 rounded-full mb-6">
                 <Shield className="w-4 h-4" />
                 <span className="text-sm font-semibold">Licensed & Insured • Safety Certified</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight text-white">
                 Professional Demolition & Excavation Services in Ontario
               </h1>
 
@@ -163,8 +173,160 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* By The Numbers */}
+        <section className="py-16 bg-secondary text-secondary-foreground">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Premium Demolition By The Numbers</h2>
+              <p className="text-lg text-white/90 max-w-2xl mx-auto">
+                Proven track record of excellence across Ontario.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Briefcase className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl md:text-5xl font-black mb-2 text-white">500+</div>
+                <p className="text-white/90 font-medium">Projects Completed</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl md:text-5xl font-black mb-2 text-white">15+</div>
+                <p className="text-white/90 font-medium">Years Experience</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Trophy className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl md:text-5xl font-black mb-2 text-white">100%</div>
+                <p className="text-white/90 font-medium">Safety Record</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl md:text-5xl font-black mb-2 text-white">24/7</div>
+                <p className="text-white/90 font-medium">Emergency Service</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Process */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Professional Process</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                From initial consultation to project completion, we ensure a smooth and efficient experience.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              <div className="relative">
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-border h-full">
+                  <div className="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl mb-4">
+                    1
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Initial Consultation</h3>
+                  <p className="text-muted-foreground">
+                    We assess your project needs, site conditions, and provide a detailed quote with timeline estimates.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-border h-full">
+                  <div className="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl mb-4">
+                    2
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Planning & Permits</h3>
+                  <p className="text-muted-foreground">
+                    Our team handles all necessary permits, safety planning, and site preparation documentation.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-border h-full">
+                  <div className="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl mb-4">
+                    3
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Safe Execution</h3>
+                  <p className="text-muted-foreground">
+                    Experienced crews execute demolition work following strict safety protocols and industry best practices.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-border h-full">
+                  <div className="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl mb-4">
+                    4
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Cleanup & Disposal</h3>
+                  <p className="text-muted-foreground">
+                    Complete site cleanup with proper debris disposal and recycling, leaving your site ready for the next phase.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Equipment & Team Showcase */}
         <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Professional Equipment & Experienced Team</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Modern machinery and skilled professionals dedicated to delivering safe, efficient demolition services.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="relative rounded-xl overflow-hidden shadow-xl group">
+                <img
+                  src="/generated/equipment-fleet.png"
+                  alt="Modern demolition equipment fleet"
+                  className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Modern Equipment Fleet</h3>
+                  <p className="text-white/90">
+                    State-of-the-art machinery maintained to the highest standards for safe and efficient project execution.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative rounded-xl overflow-hidden shadow-xl group">
+                <img
+                  src="/generated/professional-team.png"
+                  alt="Professional demolition team"
+                  className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Expert Safety-Certified Team</h3>
+                  <p className="text-white/90">
+                    Experienced professionals with comprehensive training in safety protocols and demolition best practices.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-16 bg-muted/20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
@@ -191,7 +353,7 @@ export default function Home() {
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Serving Ontario Communities</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Serving Ontario Communities</h2>
               <p className="text-lg text-white/80 max-w-2xl mx-auto">
                 Professional demolition services across major Ontario markets.
               </p>

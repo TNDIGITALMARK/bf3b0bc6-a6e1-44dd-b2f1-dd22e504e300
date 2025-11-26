@@ -45,7 +45,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Our Services</h3>
+            <h3 className="font-bold text-lg mb-4 text-white">Our Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service}>
@@ -62,7 +62,7 @@ export function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Service Areas</h3>
+            <h3 className="font-bold text-lg mb-4 text-white">Service Areas</h3>
             <div className="flex items-start gap-2 mb-3">
               <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
               <span className="text-sm text-white/80">Serving Ontario</span>
@@ -78,7 +78,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Contact Us</h3>
+            <h3 className="font-bold text-lg mb-4 text-white">Contact Us</h3>
             <div className="space-y-4">
               <a
                 href="tel:4379919026"
