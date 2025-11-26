@@ -33,7 +33,7 @@ export function ProjectShowcase({
           </div>
         </div>
         <div className="absolute top-4 right-4">
-          <Badge variant="secondary" className="bg-secondary text-secondary-foreground font-semibold">
+          <Badge variant="secondary" className="font-semibold">
             Completed
           </Badge>
         </div>

@@ -415,3 +415,43 @@ label {
 .text-on-dark {
   color: white !important;
 }
+
+/* ============================================
+   BUTTON & BADGE TEXT COLOR FIXES
+   Ensure orange/secondary elements have white text
+   ============================================ */
+
+/* Force white text on secondary (orange) buttons and badges */
+button[class*="bg-secondary"],
+[class*="bg-secondary"][class*="inline-flex"],
+.bg-secondary button {
+  color: white !important;
+}
+
+/* Ensure all children of secondary buttons/badges are white */
+button[class*="bg-secondary"] *,
+[class*="bg-secondary"][class*="inline-flex"] *,
+.bg-secondary button * {
+  color: white !important;
+}
+
+/* Override text-secondary-foreground when used with bg-secondary */
+[class*="bg-secondary"][class*="text-secondary-foreground"] {
+  color: white !important;
+}
+
+/* Sections with bg-secondary should have white text */
+section.bg-secondary,
+section.bg-secondary * {
+  color: white !important;
+}
+
+section.bg-secondary h1,
+section.bg-secondary h2,
+section.bg-secondary h3,
+section.bg-secondary h4,
+section.bg-secondary h5,
+section.bg-secondary h6,
+section.bg-secondary p {
+  color: white !important;
+}

@@ -42,7 +42,7 @@ export function ServiceCard({
         </ul>
       )}
 
-      <Button asChild variant="outline" className="w-full group-hover:bg-secondary group-hover:text-secondary-foreground group-hover:border-secondary">
+      <Button asChild variant="outline" className="w-full group-hover:bg-secondary group-hover:text-white group-hover:border-secondary">
         <Link href={href}>Learn More</Link>
       </Button>
     </div>

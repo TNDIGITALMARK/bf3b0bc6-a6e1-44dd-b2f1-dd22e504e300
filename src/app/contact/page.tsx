@@ -207,7 +207,7 @@ export default function ContactPage() {
               </p>
               <a
                 href="tel:4379919026"
-                className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+                className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 Call Now: (437) 991-9026

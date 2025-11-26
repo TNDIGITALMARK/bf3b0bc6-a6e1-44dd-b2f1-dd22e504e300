@@ -174,7 +174,7 @@ export default function Home() {
         </section>
 
         {/* By The Numbers */}
-        <section className="py-16 bg-secondary text-secondary-foreground">
+        <section className="py-16 bg-secondary text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Premium Demolition By The Numbers</h2>
@@ -388,7 +388,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-secondary text-secondary-foreground">
+        <section className="py-16 bg-secondary text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Project?</h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
