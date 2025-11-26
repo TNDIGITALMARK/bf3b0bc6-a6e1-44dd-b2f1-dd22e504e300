@@ -481,13 +481,13 @@ a.cta-btn-quote:hover * {
   opacity: 0.95;
 }
 
-/* Second CTA button: "Call" - White text on transparent/dark background */
+/* Second CTA button: "Call" - Orange text on white background (matching Quote button) */
 button.cta-btn-call,
 a.cta-btn-call,
 .cta-btn-call,
 button.cta-btn-call *,
 a.cta-btn-call * {
-  color: white !important;
+  color: hsl(var(--secondary)) !important;
   font-weight: 600 !important;
 }
 
@@ -496,8 +496,8 @@ a.cta-btn-call:hover,
 .cta-btn-call:hover,
 button.cta-btn-call:hover *,
 a.cta-btn-call:hover * {
-  color: white !important;
-  opacity: 1;
+  color: hsl(var(--secondary)) !important;
+  opacity: 0.95;
 }
 
 /* ============================================

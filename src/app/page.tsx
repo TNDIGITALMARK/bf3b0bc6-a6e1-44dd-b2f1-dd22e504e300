@@ -398,7 +398,7 @@ export default function Home() {
               <Button asChild size="lg" variant="outline" className="bg-white hover:bg-white/90 border-white cta-btn-quote">
                 <Link href="/contact">Request a Quote</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10 cta-btn-call">
+              <Button asChild size="lg" variant="outline" className="bg-white hover:bg-white/90 border-white cta-btn-call">
                 <a href="tel:4379919026">Call (437) 991-9026</a>
               </Button>
             </div>
