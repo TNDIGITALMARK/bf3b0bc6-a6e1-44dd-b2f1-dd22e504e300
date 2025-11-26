@@ -25,7 +25,7 @@ export default function ContactPage() {
         <section className="bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary px-4 py-2 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 bg-secondary/20 text-white px-4 py-2 rounded-full mb-6">
                 <Shield className="w-4 h-4" />
                 <span className="text-sm font-semibold">Get in Touch</span>
               </div>

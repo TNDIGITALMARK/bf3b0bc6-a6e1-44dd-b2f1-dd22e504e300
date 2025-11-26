@@ -40,7 +40,7 @@ export function Navigation() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center font-bold text-2xl">
+            <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center font-bold text-2xl text-white">
               PD
             </div>
             <div className="hidden sm:block">

@@ -23,7 +23,7 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center font-bold text-2xl">
+              <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center font-bold text-2xl text-white">
                 PD
               </div>
               <div>
