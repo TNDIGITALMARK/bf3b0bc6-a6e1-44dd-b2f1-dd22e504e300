@@ -458,46 +458,48 @@ section.bg-secondary p {
 
 /* ============================================
    CTA SECTION BUTTON TEXT CLASSES
-   Specific classes for the two CTA buttons ONLY
+   Specific targeting for CTA buttons
    Maximum specificity to override all other styles
    ============================================ */
 
-/* First CTA button: "Request a Quote" - Orange text on white background */
-button.cta-btn-quote,
-a.cta-btn-quote,
-.cta-btn-quote,
-button.cta-btn-quote *,
-a.cta-btn-quote * {
+/* Target outline variant buttons with text-secondary class */
+button[class*="border"][class*="bg-white"][class*="text-secondary"],
+a[class*="border"][class*="bg-white"][class*="text-secondary"] {
   color: hsl(var(--secondary)) !important;
   font-weight: 600 !important;
 }
 
-button.cta-btn-quote:hover,
-a.cta-btn-quote:hover,
-.cta-btn-quote:hover,
-button.cta-btn-quote:hover *,
-a.cta-btn-quote:hover * {
+button[class*="border"][class*="bg-white"][class*="text-secondary"]:hover,
+a[class*="border"][class*="bg-white"][class*="text-secondary"]:hover {
   color: hsl(var(--secondary)) !important;
-  opacity: 0.95;
 }
 
-/* Second CTA button: "Call" - Orange text on white background (matching Quote button) */
-button.cta-btn-call,
-a.cta-btn-call,
-.cta-btn-call,
-button.cta-btn-call *,
-a.cta-btn-call * {
+/* Target buttons inside bg-secondary sections with bg-white */
+section.bg-secondary button[class*="bg-white"],
+section.bg-secondary a[class*="bg-white"] {
   color: hsl(var(--secondary)) !important;
-  font-weight: 600 !important;
 }
 
-button.cta-btn-call:hover,
-a.cta-btn-call:hover,
-.cta-btn-call:hover,
-button.cta-btn-call:hover *,
-a.cta-btn-call:hover * {
+section.bg-secondary button[class*="bg-white"]:hover,
+section.bg-secondary a[class*="bg-white"]:hover {
   color: hsl(var(--secondary)) !important;
-  opacity: 0.95;
+}
+
+/* Ensure the text color is applied to Link components inside buttons */
+section.bg-secondary button[class*="bg-white"] > *,
+section.bg-secondary a[class*="bg-white"] > * {
+  color: hsl(var(--secondary)) !important;
+}
+
+/* Override for border-white buttons on dark backgrounds */
+[class*="bg-secondary"] button[class*="border-white"]:not([class*="bg-white"]),
+[class*="bg-secondary"] a[class*="border-white"]:not([class*="bg-white"]) {
+  color: white !important;
+}
+
+[class*="bg-secondary"] button[class*="border-white"]:not([class*="bg-white"]) *,
+[class*="bg-secondary"] a[class*="border-white"]:not([class*="bg-white"]) * {
+  color: white !important;
 }
 
 /* ============================================
@@ -535,5 +537,20 @@ button[class*="border"][class*="border-input"][class*="bg-background"] {
 }
 
 [class*="text-secondary"]:not([class*="text-secondary-foreground"]) {
+  color: hsl(var(--secondary)) !important;
+}
+
+/* HIGHEST PRIORITY: Force orange text on white buttons in CTA sections */
+section[class*="bg-secondary"] button.inline-flex[class*="bg-white"],
+section[class*="bg-secondary"] a.inline-flex[class*="bg-white"],
+section.bg-secondary button.inline-flex[class*="bg-white"],
+section.bg-secondary a.inline-flex[class*="bg-white"] {
+  color: hsl(var(--secondary)) !important;
+}
+
+section[class*="bg-secondary"] button.inline-flex[class*="bg-white"] *,
+section[class*="bg-secondary"] a.inline-flex[class*="bg-white"] *,
+section.bg-secondary button.inline-flex[class*="bg-white"] *,
+section.bg-secondary a.inline-flex[class*="bg-white"] * {
   color: hsl(var(--secondary)) !important;
 }
