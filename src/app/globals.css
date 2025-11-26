@@ -9,8 +9,8 @@
 
 :root {
   /* Font System */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading: 'Roboto', 'Inter', sans-serif;
+  --font-primary: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: var(--font-roboto), 'Roboto', 'Inter', sans-serif;
   --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
 
   /* Premium Demolition Color Palette */
@@ -459,26 +459,81 @@ section.bg-secondary p {
 /* ============================================
    CTA SECTION BUTTON TEXT CLASSES
    Specific classes for the two CTA buttons ONLY
+   Maximum specificity to override all other styles
    ============================================ */
 
 /* First CTA button: "Request a Quote" - Orange text on white background */
-.cta-btn-quote {
+button.cta-btn-quote,
+a.cta-btn-quote,
+.cta-btn-quote,
+button.cta-btn-quote *,
+a.cta-btn-quote * {
   color: hsl(var(--secondary)) !important;
   font-weight: 600 !important;
 }
 
-.cta-btn-quote:hover {
+button.cta-btn-quote:hover,
+a.cta-btn-quote:hover,
+.cta-btn-quote:hover,
+button.cta-btn-quote:hover *,
+a.cta-btn-quote:hover * {
   color: hsl(var(--secondary)) !important;
   opacity: 0.95;
 }
 
 /* Second CTA button: "Call" - White text on transparent/dark background */
-.cta-btn-call {
+button.cta-btn-call,
+a.cta-btn-call,
+.cta-btn-call,
+button.cta-btn-call *,
+a.cta-btn-call * {
   color: white !important;
   font-weight: 600 !important;
 }
 
-.cta-btn-call:hover {
+button.cta-btn-call:hover,
+a.cta-btn-call:hover,
+.cta-btn-call:hover,
+button.cta-btn-call:hover *,
+a.cta-btn-call:hover * {
   color: white !important;
   opacity: 1;
+}
+
+/* ============================================
+   GLOBAL BUTTON VARIANT FIXES
+   Ensure proper text colors for all button variants
+   ============================================ */
+
+/* Secondary variant buttons ALWAYS have white text */
+button[class*="bg-secondary"],
+a[class*="bg-secondary"],
+[class*="inline-flex"][class*="bg-secondary"] {
+  color: white !important;
+}
+
+button[class*="bg-secondary"] *,
+a[class*="bg-secondary"] *,
+[class*="inline-flex"][class*="bg-secondary"] * {
+  color: white !important;
+}
+
+/* Override any text-secondary-foreground when used with bg-secondary */
+[class*="bg-secondary"][class*="text-secondary-foreground"] {
+  color: white !important;
+}
+
+/* Ensure outline variant buttons respect custom text color classes */
+button[class*="border"][class*="border-input"][class*="bg-background"] {
+  /* Allow text color to be inherited from custom classes */
+}
+
+/* Specific text color utilities that should always win */
+.text-white,
+.text-white * {
+  color: white !important;
+}
+
+[class*="text-secondary"]:not([class*="text-secondary-foreground"]) {
+  color: hsl(var(--secondary)) !important;
 }
