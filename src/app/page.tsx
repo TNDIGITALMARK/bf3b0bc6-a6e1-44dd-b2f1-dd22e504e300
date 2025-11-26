@@ -395,10 +395,10 @@ export default function Home() {
               Get a free quote today and experience professional demolition services you can trust.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="outline" className="bg-white hover:bg-white/90 text-secondary border-white">
+              <Button asChild size="lg" variant="outline" className="bg-white hover:bg-white/90 border-white btn-orange-text">
                 <Link href="/contact">Request a Quote</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10 text-white">
+              <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10 btn-orange-text">
                 <a href="tel:4379919026">Call (437) 991-9026</a>
               </Button>
             </div>

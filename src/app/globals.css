@@ -455,3 +455,17 @@ section.bg-secondary h6,
 section.bg-secondary p {
   color: white !important;
 }
+
+/* ============================================
+   ORANGE TEXT BUTTON CLASS
+   For CTA buttons that need safety orange text
+   ============================================ */
+
+.btn-orange-text {
+  color: hsl(var(--secondary)) !important;
+}
+
+.btn-orange-text:hover {
+  color: hsl(var(--secondary)) !important;
+  opacity: 0.9;
+}
